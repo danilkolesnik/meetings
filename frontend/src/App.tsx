@@ -1,11 +1,16 @@
 import React from 'react';
+import { BrowserRouter, useRoutes } from "react-router-dom";
+import { routes } from "./routes";
+
+const AppRoutes = () => {
+    return useRoutes(routes);
+  };
 
 const App: React.FC = () => {
     return (
-        <div>
-            <h1>Welcome to My React App</h1>
-            {/* Additional components can be added here */}
-        </div>
+        <BrowserRouter>
+            <AppRoutes />
+        </BrowserRouter>
     );
 };
 
