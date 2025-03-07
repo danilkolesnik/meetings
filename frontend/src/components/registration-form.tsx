@@ -4,12 +4,13 @@ import Link from "next/link";
 import { FacebookIcon, GoogleIcon, TelegramIcon } from "@component/assets/icons/icons";
 import CustomInput from "@component/ui/CustomInput";
 import CustomButton from "@component/ui/CustomButton";
+import { primary } from "@component/utils/constants";
 
 export function RegistrationForm() {
   const [step, setStep] = useState(1)
 
   return (
-    <div className="w-full max-w-md bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="w-full max-w-md bg-white rounded-xl overflow-hidden">
       <div className="p-6 text-center">
         <h1 className="text-2xl font-bold tracking-tight text-gray-700 pt-6">Create an account</h1>
         <p className="text-gray-500 mt-1">Join our community and find your perfect match</p>
@@ -40,7 +41,7 @@ export function RegistrationForm() {
               <CustomButton onClick={() => setStep(2)} 
                 icon={
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                 }>
                 Continue
@@ -97,17 +98,17 @@ export function RegistrationForm() {
       <div className="px-6 pb-6 text-center text-sm text-gray-500 space-y-2">
         <div>
           Already have an account?{" "}
-          <Link href="#" className="text-pink-500 hover:underline">
+          <Link href="#" className={`text-${primary} hover:underline`}>
             Sign in
           </Link>
         </div>
         <div>
           By signing up, you agree to our{" "}
-          <Link href="#" className="text-pink-500 hover:underline">
+          <Link href="#" className={`text-${primary} hover:underline`}>
             Terms of Service
           </Link>{" "}
           and{" "}
-          <Link href="#" className="text-pink-500 hover:underline">
+          <Link href="#" className={`text-${primary} hover:underline`}>
             Privacy Policy
           </Link>
         </div>
